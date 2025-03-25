@@ -1,0 +1,214 @@
+/* Mobile-specific styles */
+.mobile-body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+}
+
+#mobile-page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mobile-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.base-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.overlay-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mobile-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide-image {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.slide-text {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.slide-text h4 {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-info h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn-border {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-border:hover {
+  background: #fff;
+  color: #000;
+}
+
+.swiper-pagination {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  margin: 5px 0;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .slide-text h4 {
+    font-size: 1em;
+  }
+
+  .slide-image {
+    max-width: 150px;
+  }
+
+  .contact-info h3 {
+    font-size: 1em;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+/* Touch-friendly scrolling */
+.slide-content {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Prevent text selection */
+.slide-content {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Optimize for different screen sizes */
+@media (min-width: 768px) {
+  .slide-text {
+    max-width: 700px;
+  }
+
+  .slide-image {
+    max-width: 250px;
+  }
+}
+
+/* Handle landscape orientation */
+@media (orientation: landscape) {
+  .slide-content {
+    padding: 10px;
+  }
+
+  .slide-image {
+    max-width: 150px;
+  }
+
+  .slide-text h4 {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+}
